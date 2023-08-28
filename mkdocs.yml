@@ -1,0 +1,9 @@
+site_name: Home Page
+theme: readthedocs
+nav:
+- 关于: about.md
+- 主页搭建: homepage_build.md
+- 优秀博客:
+  - 优秀博客汇总: 'blogs/index.md'
+- 书籍:
+  - 《架构整洁之道》: 'book/架构整洁之道.md'
