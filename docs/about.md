@@ -1,12 +1,19 @@
-# 关于
+# About me/关于我
 
-我是
+Who am I / 简介
 
-* SparkSQL 内核开发者
-* Apache Paimon contributor
+* SparkSQL Kernel Developer / SparkSQL 内核开发工程师
+* [Apache Paimon](https://github.com/apache/incubator-paimon) contributor
 
-兴趣
+Programming language / 编程语言
+
+* Java/Scala
+
+Framework / 熟练框架
 
 * SparkSQL
-* Java/Scala
-* CPP
+* Parquet
+
+Studying / 正在学习
+
+* Cpp
