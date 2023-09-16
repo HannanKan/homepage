@@ -8,7 +8,7 @@ theme:
     - content.code.copy
     - content.code.select
 plugins:
-  - meta
+  # - meta-manager
   # - glightbox
 
 markdown_extensions:
