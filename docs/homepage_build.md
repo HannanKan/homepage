@@ -24,4 +24,8 @@
 ## 切换 material 主题
 material 主题配置非常 nice 的[教程](https://shafish.cn/blog/mkdocs/#7-metadata%E8%AE%BE%E7%BD%AE)
 
+material 图标(font) 选择: https://fontawesome.com/v6/icons?o=r&s=solid
+
 ## 添加评论
+* https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
+* https://www.lixueduan.com/posts/blog/02-add-giscus-comment/
