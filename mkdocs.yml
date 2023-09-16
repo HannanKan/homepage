@@ -1,8 +1,9 @@
-site_name: Home Page
+site_name: Hannan Kan
 site_url: https://hannankan.github.io/homepage/
 repo_name: https://github.com/HannanKan/homepage
 theme:
   name: 'material'
+  custom_dir: overrides
 nav:
 - Home: 'index.md'
 - About me: about.md
@@ -18,6 +19,12 @@ nav:
   - 工程实践: 'engineering/工程实践.md'
 extra:
   social:
+        - icon: fontawesome/solid/envelope
+          link: mailto:<hannankan@foxmail.com>
+          name: 邮箱地址
+        - icon: fontawesome/solid/paper-plane
+          link: https://www.zhihu.com/people/HannanKan
+          name: 知乎
   search:
     language: 'en, de, ru'
 copyright: "Copyright &copy; 2023 - now"

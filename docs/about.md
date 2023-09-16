@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # About me/关于我
 
 Home Page / 主页
