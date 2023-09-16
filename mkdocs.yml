@@ -1,6 +1,10 @@
 site_name: Home Page
-theme: readthedocs
+site_url: https://hannankan.github.io/homepage/
+repo_name: https://github.com/HannanKan/homepage
+theme:
+  name: 'material'
 nav:
+- Home: 'index.md'
 - About me: about.md
 - 主页搭建: homepage_build.md
 - 优秀博客:
@@ -12,3 +16,9 @@ nav:
   - 技巧总结: 'rfc/源码阅读技巧总结.md'
 - 工程实践:
   - 工程实践: 'engineering/工程实践.md'
+extra:
+  social:
+  search:
+    language: 'en, de, ru'
+copyright: "Copyright &copy; 2023 - now"
+
