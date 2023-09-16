@@ -20,3 +20,8 @@
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+## 切换 material 主题
+material 主题配置非常 nice 的[教程](https://shafish.cn/blog/mkdocs/#7-metadata%E8%AE%BE%E7%BD%AE)
+
+## 添加评论
