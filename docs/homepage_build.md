@@ -45,6 +45,11 @@ extra:
 
 material 主题中可以使用各种小图标(也叫 font)，比如将当前页翻到最后看到的纸飞机和邮箱图标。图标样式和名字可以从下面[链接](https://fontawesome.com/v6/icons?o=r&s=solid)中找到。
 
+### 插入图片
+[插入图片教程]: https://squidfunk.github.io/mkdocs-material/reference/images/
+
+参考 [插入图片教程]
+
 ### 自定义
 虽然 material 主题默认配置已经很好了，但是免不了要做一些自定义修改，比如给页面添加一个统计访问量的功能。网页都是通过 markdown 写的，那怎么修改呢？
 

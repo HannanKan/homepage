@@ -1,10 +1,10 @@
 # 主页
 
 ## About me/关于我
-
-Home Page / 主页
-
-* [https://hannankan.github.io/homepage/about/](https://hannankan.github.io/homepage/about/)
+<figure markdown>
+  ![Image title](./image/potrait.jpg){ width="300" }
+  <figcaption>我 / Me</figcaption>
+</figure>
 
 Who am I / 简介
 

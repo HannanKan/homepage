@@ -9,6 +9,8 @@ theme:
     - content.code.select
 plugins:
   - meta-manager
+  - glightbox
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -17,6 +19,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
 
 nav:
 - Home: 'index.md'
