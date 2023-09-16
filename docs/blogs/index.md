@@ -16,3 +16,7 @@ comments: true
 
 ## 设计模式
 [https://refactoringguru.cn/design-patterns/catalog](https://refactoringguru.cn/design-patterns/catalog)
+
+## duckdb 相关技术
+[duckdb主页]: http://duckdb.org/why_duckdb
+[duckdb主页]
