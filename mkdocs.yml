@@ -26,15 +26,21 @@ markdown_extensions:
 nav:
 - Home: 'index.md'
 - 主页搭建: homepage_build.md
-- 优秀博客:
-  - 优秀博客汇总: 'blogs/index.md'
 - 书籍:
-  - 《代码整洁之道》: 'book/代码整洁之道.md'
-  - 《架构整洁之道》: 'book/架构整洁之道.md'
+  - 2023年:
+    - 技术:
+      - 《代码整洁之道》: 'book/代码整洁之道.md'
+      - 《架构整洁之道》: 'book/架构整洁之道.md'
 - 源码:
   - 技巧总结: 'rfc/源码阅读技巧总结.md'
 - 工程实践:
   - 工程实践: 'engineering/工程实践.md'
+- 优秀博客:
+  - 优秀博客汇总: 'blogs/index.md'
+- 学习资料:
+  - 技术资料: 'technical_materials.md'
+  - 人文资料: 'cultural_materials.md'
+
 extra:
   social:
         - icon: fontawesome/solid/envelope

@@ -12,11 +12,5 @@ comments: true
 ## code0xff —— 大数据、数据库
 博客：[https://code0xff.org/](https://code0xff.org/)
 
-* [gluten](https://code0xff.org/post/2023/08/gluten%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96/)
-
 ## 设计模式
 [https://refactoringguru.cn/design-patterns/catalog](https://refactoringguru.cn/design-patterns/catalog)
-
-## duckdb 相关技术
-[duckdb主页]: http://duckdb.org/why_duckdb
-[duckdb主页]
