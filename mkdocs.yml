@@ -8,8 +8,9 @@ theme:
     - content.code.copy
     - content.code.select
 plugins:
-  # - meta-manager
-  # - glightbox
+  - meta-manager
+  - search
+  - glightbox
 
 markdown_extensions:
   - pymdownx.highlight:

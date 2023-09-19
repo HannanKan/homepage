@@ -1,0 +1,2 @@
+mkdocs-meta-manager==0.2.1
+mkdocs-glightbox==0.3.4

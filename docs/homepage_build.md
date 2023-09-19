@@ -216,7 +216,39 @@ plugins:
 # 参考 https://pypi.org/project/mkdocs-meta-manager/
 plugins:
     - meta-manager
+    - search
 ```
+由于我是使用 github action 自动触发编译+部署，所以需要配置安装对应插件的 python 安装包。 github action 配置安装 python 包参考下一小节。
+
+
+## 安装 python 包依赖
+在使用 material 主题时，希望用到一些高级功能，这个时候需要安装一些 mkdocs 插件，这些插件需要安装一些 python 包；而我又是通过 github action 自动编译+部署网站的，所以需要在 github action 上添加安装 python 包依赖的配置。我使用的是[mkdocs-deploy-gh-pages]配置 github action，通过它的 README 可以看到添加 python 包依赖的配置方法，[mkdocs-deploy-gh-pages] README 还描述了安装其他依赖的方法。(PS. 我开始没注意到这个README上有相关内容，还提了个issue问，现在感到非常 shameful) 具体做法是：
+
+1. github action 的yml文件新增两行配置
+```yml  hl_lines="18 19"
+name: Publish docs via GitHub Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXTRA_PACKAGES: build-base
+          REQUIREMENTS: requirements.txt
+          CONFIG_FILE: mkdocs.yml
+```
+2. 在项目根目录下新建 requirements.txt 文件，文件中新增需要安装的 python 依赖
+3. 在 mkdocs.yml 新增所需插件，前文已提及，不赘述
+
 
   [Giscus]: https://giscus.app/
   [Giscus GitHub App]: https://github.com/apps/giscus
@@ -225,3 +257,4 @@ plugins:
   [built-in meta plugin]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
   [Giscus 申请教程]: https://www.lixueduan.com/posts/blog/02-add-giscus-comment/
   [基于giscus搭建评论系统]: https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
+  [mkdocs-deploy-gh-pages]: https://github.com/mhausenblas/mkdocs-deploy-gh-pages/tree/master#readme
