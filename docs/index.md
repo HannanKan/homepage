@@ -1,3 +1,6 @@
+---
+comments: true
+---
 # 主页
 
 ## About me/关于我
