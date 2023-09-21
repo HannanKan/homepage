@@ -12,7 +12,14 @@
 
 * [code0xff的博客]
 * [李亚坤的博客]
-* [neoremind的博客]
+
+### neoremind
+[neoremind的博客] 链接
+
+经典文章：
+
+* [浅谈OLAP系统核心技术点](https://zhuanlan.zhihu.com/p/163236128)
+* [深入解析Spark中的RPC](https://zhuanlan.zhihu.com/p/28893155)
 
 ## 设计模式
 [https://refactoringguru.cn/design-patterns/catalog](https://refactoringguru.cn/design-patterns/catalog)
