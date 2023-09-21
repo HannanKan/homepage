@@ -8,9 +8,11 @@
 ## 大数据、数据库
 [code0xff的博客]: https://code0xff.org/
 [李亚坤的博客]: https://yoelee.github.io/about/
+[neoremind的博客]: http://neoremind.com/
 
 * [code0xff的博客]
 * [李亚坤的博客]
+* [neoremind的博客]
 
 ## 设计模式
 [https://refactoringguru.cn/design-patterns/catalog](https://refactoringguru.cn/design-patterns/catalog)
