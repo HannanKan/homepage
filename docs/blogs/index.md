@@ -9,9 +9,11 @@
 [code0xff的博客]: https://code0xff.org/
 [李亚坤的博客]: https://yoelee.github.io/about/
 [neoremind的博客]: http://neoremind.com/
+[codedump的博客]: https://www.codedump.info/
 
 * [code0xff的博客]
 * [李亚坤的博客]
+* [codedump的博客]
 
 ### neoremind
 [neoremind的博客] 链接
