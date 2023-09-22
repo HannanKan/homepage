@@ -9,7 +9,11 @@
 ## Velxo & Gluten
 [gluten 学习资料]: https://code0xff.org/post/2023/08/gluten%E5%92%8C%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96/
 
+[gluten_data+ai_meetup_video]: https://www.bilibili.com/video/BV1kd4y1X7qb/?spm_id_from=333.337.search-card.all.click&vd_source=32c7baa4f6716f9fae29765fb841b3b2
+
 [gluten 学习资料]
+
+[gluten_data+ai_meetup_video]
 
 
 
