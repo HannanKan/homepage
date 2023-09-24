@@ -10,6 +10,7 @@
 [李亚坤的博客]: https://yoelee.github.io/about/
 [neoremind的博客]: http://neoremind.com/
 [codedump的博客]: https://www.codedump.info/
+[chasingegg的博客]: https://chasingegg.github.io/
 
 * [code0xff的博客]
 * [李亚坤的博客]
