@@ -41,6 +41,8 @@ nav:
 - 学习资料:
   - 技术资料: 'technical_materials.md'
   - 人文资料: 'cultural_materials.md'
+- 工具推荐:
+  - 效率工具: 'utils/efficiency_tools.md'
 
 extra:
   social:
