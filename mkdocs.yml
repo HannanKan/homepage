@@ -28,6 +28,7 @@ nav:
 - Home: 'index.md'
 - 主页搭建: homepage_build.md
 - 书籍:
+  - 书单: 'book/books_index.md'
   - 2023年:
     - 技术:
       - 《代码整洁之道》: 'book/代码整洁之道.md'
