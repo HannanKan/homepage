@@ -1,5 +1,10 @@
 # 技术资料
 
+## 高效列压缩算法
+[BtrBlocks sigmod23]: https://zhuanlan.zhihu.com/p/657619369
+
+[BtrBlocks sigmod23]
+
 ## The Road to Composable Data Systems: Thoughts on the Last 15 Years and the Future
 [The Road to Composable Data Systems: Thoughts on the Last 15 Years and the Future]:https://wesmckinney.com/blog/looking-back-15-years/#modular-query-processing-duckdb-velox-and-friends
 [DataBases in 2022: A year in Review]: https://zhuanlan.zhihu.com/p/596916654
