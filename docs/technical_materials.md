@@ -1,5 +1,9 @@
 # 技术资料
 
+## 查询重写技术
+* [Detailed Explanation of Query Rewriting Based on Materialized Views](https://www.alibabacloud.com/blog/detailed-explanation-of-query-rewriting-based-on-materialized-views_598129)
+* [17 Basic Query Rewrite@Oracle](http://pages.di.unipi.it/ghelli/didattica/bdldoc/B19306_01/server.102/b14223/qrbasic.htm)
+
 ## 高效列压缩算法
 [BtrBlocks sigmod23]: https://zhuanlan.zhihu.com/p/657619369
 
