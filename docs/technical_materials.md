@@ -29,3 +29,10 @@
 ## duckdb 相关技术
 [duckdb主页]: http://duckdb.org/why_duckdb
 [duckdb主页]
+
+
+## MOOC
+[cmu15-721]:https://15721.courses.cs.cmu.edu/spring2023/schedule.html
+
+### database
+[cmu15-721]
