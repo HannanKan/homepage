@@ -12,6 +12,7 @@
 [codedump的博客]: https://www.codedump.info/
 [chasingegg的博客]: https://chasingegg.github.io/
 [Tao's blog]: https://aaaaaaron.github.io/
+[Yilun Fan]: http://www.fanyilun.me
 
 * [code0xff的博客]
 * [李亚坤的博客]
@@ -20,12 +21,19 @@
 * [chasingegg的博客]
 
 ### neoremind
-[neoremind的博客] 链接
+[neoremind的博客]
 
 经典文章：
 
 * [浅谈OLAP系统核心技术点](https://zhuanlan.zhihu.com/p/163236128)
 * [深入解析Spark中的RPC](https://zhuanlan.zhihu.com/p/28893155)
+
+### Yilun fan
+[Yilun Fan]
+
+经典文章：
+
+* [spark和hive的statistics](http://www.fanyilun.me/2022/08/02/%E5%85%B3%E4%BA%8ESpark%E5%92%8CHive%E7%9A%84statistics/)
 
 ## 设计模式
 [https://refactoringguru.cn/design-patterns/catalog](https://refactoringguru.cn/design-patterns/catalog)
