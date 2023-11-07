@@ -13,12 +13,14 @@
 [chasingegg的博客]: https://chasingegg.github.io/
 [Tao's blog]: https://aaaaaaron.github.io/
 [Yilun Fan]: http://www.fanyilun.me
+[大数据技术体系]: https://blog.csdn.net/Shockang/article/details/117266839
 
 * [code0xff的博客]
 * [李亚坤的博客]
 * [codedump的博客]
 * [Tao's blog]
 * [chasingegg的博客]
+* [大数据技术体系]
 
 ### neoremind
 [neoremind的博客]
