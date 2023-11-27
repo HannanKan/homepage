@@ -37,6 +37,8 @@ nav:
   - 技巧总结: 'rfc/源码阅读技巧总结.md'
 - 工程实践:
   - 工程实践: 'engineering/工程实践.md'
+  - Java/Scala:
+    - 并发: 'engineering/java_scala/并发.md'
 - 优秀博客:
   - 优秀博客汇总: 'blogs/index.md'
 - 学习资料:
