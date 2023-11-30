@@ -251,7 +251,7 @@ jobs:
 
 
 ## 一些有用的插件
-material 主题支持 markdown 的 check box 语法，参考 [mkdocs-material-checkbox]
+* material 主题支持 markdown 的 **checkbox** 语法，参考 [mkdocs-material-checkbox]
 ```yml
  markdown_extensions:
   - def_list
