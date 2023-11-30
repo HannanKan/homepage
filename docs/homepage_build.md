@@ -250,6 +250,15 @@ jobs:
 3. 在 mkdocs.yml 新增所需插件，前文已提及，不赘述
 
 
+## 一些有用的插件
+material 主题支持 markdown 的 check box 语法，参考 [mkdocs-material-checkbox]
+```yml
+ markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+```
+
   [Giscus]: https://giscus.app/
   [Giscus GitHub App]: https://github.com/apps/giscus
   [overriding partials]:https://squidfunk.github.io/mkdocs-material/customization/#overriding-partials
@@ -258,3 +267,4 @@ jobs:
   [Giscus 申请教程]: https://www.lixueduan.com/posts/blog/02-add-giscus-comment/
   [基于giscus搭建评论系统]: https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
   [mkdocs-deploy-gh-pages]: https://github.com/mhausenblas/mkdocs-deploy-gh-pages/tree/master#readme
+  [mkdocs-material-checkbox]: https://squidfunk.github.io/mkdocs-material/reference/lists/
