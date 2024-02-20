@@ -42,6 +42,9 @@ nav:
   - 工程实践: 'engineering/工程实践.md'
   - Java/Scala:
     - 并发: 'engineering/java_scala/并发.md'
+    - Maven: 'engineering/java_scala/maven.md'
+    - 性能优化:
+      - 1BRC竞赛: 'engineering/java_scala/性能优化/1brc.md'
   - 快学大数据:
     - 学习大纲: 'engineering/intro2BigDataComponent/outline.md'
     - Hudi:
