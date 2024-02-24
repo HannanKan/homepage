@@ -45,6 +45,7 @@ nav:
     - Maven: 'engineering/java_scala/maven.md'
     - 性能优化:
       - 1BRC竞赛: 'engineering/java_scala/性能优化/1brc.md'
+      - 1BRC竞赛代码赏析: 'engineering/java_scala/性能优化/1brc-review.md'
   - 快学大数据:
     - 学习大纲: 'engineering/intro2BigDataComponent/outline.md'
     - Hudi:
