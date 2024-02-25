@@ -14,6 +14,7 @@
 [Tao's blog]: https://aaaaaaron.github.io/
 [Yilun Fan]: http://www.fanyilun.me
 [大数据技术体系]: https://blog.csdn.net/Shockang/article/details/117266839
+[Alex Chi]: https://www.skyzh.dev/
 
 * [code0xff的博客]
 * [李亚坤的博客]
@@ -21,6 +22,7 @@
 * [Tao's blog]
 * [chasingegg的博客]
 * [大数据技术体系]
+* [Alex Chi]
 
 ### neoremind
 [neoremind的博客]
