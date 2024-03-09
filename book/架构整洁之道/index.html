@@ -1,0 +1,2197 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hannankan.github.io/homepage/book/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/">
+      
+      
+        <link rel="prev" href="../%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/">
+      
+      
+        <link rel="next" href="../../rfc/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>《架构整洁之道》 - Hannan Kan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clean-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hannan Kan" class="md-header__button md-logo" aria-label="Hannan Kan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hannan Kan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              《架构整洁之道》
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hannan Kan" class="md-nav__button md-logo" aria-label="Hannan Kan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Hannan Kan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../homepage_build/" class="md-nav__link">
+        主页搭建
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          书籍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="书籍" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          书籍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../books_index/" class="md-nav__link">
+        书单
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="true">
+          2023年
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2023年" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          2023年
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" tabindex="0" aria-expanded="true">
+          技术
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技术" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          技术
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/" class="md-nav__link">
+        《代码整洁之道》
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          《架构整洁之道》
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        《架构整洁之道》
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前言
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip" class="md-nav__link">
+    左耳朵耗子 R.I.P
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yurii-says" class="md-nav__link">
+    yurii-says/余晟
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第一章、设计与架构究竟是什么
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    第二章、两个价值的维度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    从基础构建开始：编程范式
+  </a>
+  
+    <nav class="md-nav" aria-label="从基础构建开始：编程范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第三章、编程范式总览
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第四章、结构化编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    第五章、面向对象编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    第六章、函数式编程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    设计原则
+  </a>
+  
+    <nav class="md-nav" aria-label="设计原则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srp" class="md-nav__link">
+    第七章、SRP 单一职责原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ocp" class="md-nav__link">
+    第八章、OCP 开闭原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp" class="md-nav__link">
+    第九章、LSP 里氏替换原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isp" class="md-nav__link">
+    第十章、ISP 接口隔离原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dip" class="md-nav__link">
+    第十一章、DIP 依赖反转原则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    组件构建原则
+  </a>
+  
+    <nav class="md-nav" aria-label="组件构建原则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    第十二章、组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    第十三章、组件聚合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第十四章、组件耦合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    软件架构
+  </a>
+  
+    <nav class="md-nav" aria-label="软件架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    第十五章、什么是软件架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    第十六章、独立性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    第十七章、划分边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    第十八章、边界剖析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    第十九章、策略与层次
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    第二十章、业务逻辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    第二十一章、尖叫的软件架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    第二十二章、整洁架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    第二十三章、展示器和谦卑对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    第二十四章、不完全边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    第二十五章、层次与边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    第二十六章、Main 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    第二十七章、服务：宏观与微观
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    第二十八章、测试边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    第二十九章、整洁的嵌入式架构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    实现细节
+  </a>
+  
+    <nav class="md-nav" aria-label="实现细节">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    第三十章、数据库只是实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    第三十一章、Web 是实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    第三十二章、应用程序框架式实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    第三十三章、案例分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    第三十四章、拾遗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          源码
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="源码" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          源码
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rfc/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="md-nav__link">
+        技巧总结
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          工程实践
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工程实践" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          工程实践
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        工程实践
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          Java/Scala
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Java/Scala" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java/Scala
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/java_scala/%E5%B9%B6%E5%8F%91/" class="md-nav__link">
+        并发
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/java_scala/maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2_3" type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" tabindex="0" aria-expanded="false">
+          性能优化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="性能优化" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          性能优化
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/java_scala/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/1brc/" class="md-nav__link">
+        1BRC竞赛
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/java_scala/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/1brc-review/" class="md-nav__link">
+        1BRC竞赛代码赏析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/java_scala/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/threadLeakInvestigate/" class="md-nav__link">
+        线程泄露
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          快学大数据
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="快学大数据" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          快学大数据
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/intro2BigDataComponent/outline/" class="md-nav__link">
+        学习大纲
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" tabindex="0" aria-expanded="false">
+          Hudi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hudi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Hudi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../engineering/intro2BigDataComponent/hudi/hudi_intro/" class="md-nav__link">
+        Hudi 简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+          优秀博客
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="优秀博客" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          优秀博客
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blogs/" class="md-nav__link">
+        优秀博客汇总
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          学习资料
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="学习资料" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          学习资料
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_materials/" class="md-nav__link">
+        技术资料
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cultural_materials/" class="md-nav__link">
+        人文资料
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          工具推荐
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="工具推荐" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          工具推荐
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/efficiency_tools/" class="md-nav__link">
+        效率工具
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前言
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip" class="md-nav__link">
+    左耳朵耗子 R.I.P
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yurii-says" class="md-nav__link">
+    yurii-says/余晟
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    第一章、设计与架构究竟是什么
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    第二章、两个价值的维度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    从基础构建开始：编程范式
+  </a>
+  
+    <nav class="md-nav" aria-label="从基础构建开始：编程范式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    第三章、编程范式总览
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第四章、结构化编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    第五章、面向对象编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    第六章、函数式编程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    设计原则
+  </a>
+  
+    <nav class="md-nav" aria-label="设计原则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srp" class="md-nav__link">
+    第七章、SRP 单一职责原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ocp" class="md-nav__link">
+    第八章、OCP 开闭原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp" class="md-nav__link">
+    第九章、LSP 里氏替换原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isp" class="md-nav__link">
+    第十章、ISP 接口隔离原则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dip" class="md-nav__link">
+    第十一章、DIP 依赖反转原则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    组件构建原则
+  </a>
+  
+    <nav class="md-nav" aria-label="组件构建原则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    第十二章、组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    第十三章、组件聚合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    第十四章、组件耦合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    软件架构
+  </a>
+  
+    <nav class="md-nav" aria-label="软件架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    第十五章、什么是软件架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    第十六章、独立性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    第十七章、划分边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    第十八章、边界剖析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    第十九章、策略与层次
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    第二十章、业务逻辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    第二十一章、尖叫的软件架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    第二十二章、整洁架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    第二十三章、展示器和谦卑对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    第二十四章、不完全边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    第二十五章、层次与边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    第二十六章、Main 组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    第二十七章、服务：宏观与微观
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    第二十八章、测试边界
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    第二十九章、整洁的嵌入式架构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    实现细节
+  </a>
+  
+    <nav class="md-nav" aria-label="实现细节">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    第三十章、数据库只是实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    第三十一章、Web 是实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    第三十二章、应用程序框架式实现细节
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    第三十三章、案例分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    第三十四章、拾遗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_puv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次, 访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+
+  <!-- Add scripts that need to run before here -->
+  
+                  
+
+
+
+<h1 id="clean-architecture">架构整洁之道 (Clean Architecture) 读书笔记</h1>
+<h2 id="_1">前言</h2>
+<p>本文是个人结合自己的思考、摘录文中菁华做的读书笔记。笔记有助于快速掌握书中精华、复习小抄，如有没明白之处可对照原文。</p>
+<p>书中结合大量的场景、实例介绍架构设计思想，读懂之后大大收益。通篇读下来记住三个关键字：解耦、抽象、实现。也对面经八股文中的 <strong>面向切面编程、控制反转</strong> 有了更进一步的理解，前者是组件之间的解耦，后者是通过抽象设计来实现架构的可扩展性。</p>
+<p>《代码整洁之道》是提升了写代码的功力，《架构整洁之道》则是提升了构建系统的内功，就好像武学中有形的招式与无形的内力。而真正的高手既要过招也要比拼内力。</p>
+<h3 id="rip">左耳朵耗子 R.I.P</h3>
+<p>程序员可以分为三个层次：普通程序员、工程师、架构师。</p>
+<ul>
+<li>普通程序员：编写代码，让程序跑起来的人。</li>
+<li>工程师：考虑易读性、易扩展性、易维护性、性能优化等。</li>
+<li>架构师：解决问题时，结合<strong>现有经验</strong>、考虑不同的<strong>业界解决方案</strong>，结合<strong>实际场景</strong>做出决策/tradeoff。比如基于业务场景给出解决方案、基于更高级的技术给出解决方案、设计更加灵活的系统等等。比 工程师 站在更高的视角考虑问题。</li>
+</ul>
+<p>《代码整洁之道》教你写出易读、可扩展、可维护、可重用的代码，《代码整洁之道：程序员的职业素养》教你怎样变成一个有修养的程序员，而《架构整洁之道》基本上是在描述软件设计的一些理论知识。</p>
+<p>《架构整洁之道》大体分成三个部分：编程范式（结构化编程、面向对象编程和函数式编程），设计原则（主要是SOLID），以及软件架构（其中讲了很多高屋建翎的内容）</p>
+<p>架构或者设计，核心要解决的问题是：分离 控制与逻辑。</p>
+<ul>
+<li>逻辑：指代业务逻辑，解决用户的问题</li>
+<li>控制：与业务无关的部分，比如多线程、异步、服务发现、部署、弹性伸缩等<strong>切面</strong>。</li>
+</ul>
+<h3 id="yurii-says">yurii-says/余晟</h3>
+<p>架构设计是一门复杂的学问，要综合考虑各种因素，<strong>做出权衡</strong>：</p>
+<ul>
+<li><strong>编码</strong>、<strong>质量</strong>、<strong>部署</strong>、<strong>发布</strong>、<strong>运维</strong>、<strong>排障</strong>、<strong>升级</strong> 等等</li>
+</ul>
+<h2 id="_2">概述</h2>
+<p>为什么要考虑软件的<strong>架构与设计</strong>？好的架构能够有如下优势</p>
+<ul>
+<li>节省项目构建、维护的人力成本</li>
+<li>让需求易于实现，只需对项目做很小的变更</li>
+<li>避免缺陷</li>
+</ul>
+<p>也即，用最小的成本，最大程度满足功能性和灵活性的需求。</p>
+<h3 id="_3">第一章、设计与架构究竟是什么</h3>
+<p>架构是从<strong>更高、更抽象的视角</strong>描述软件、设计是从更<strong>底层的视角</strong>描述软件，二者不可分割。后文中出现的架构包括了架构与设计两层意思。</p>
+<p>软件架构的<strong>终极目标</strong>是，用<strong>最小的人力成本</strong>来满足<strong>构建</strong>和<strong>维护</strong>该系统的需求。</p>
+<h3 id="_4">第二章、两个价值的维度</h3>
+<p>软件系统的两个价值维度：</p>
+<ul>
+<li><strong>系统行为</strong>的正确性：当前系统能否按照预期运行。</li>
+<li><strong>系统架构</strong>的灵活性：需求迭代时，系统更新的难易程度。</li>
+</ul>
+<p>两者都很重要，但前者<strong>更加紧急</strong>，因为系统在每时每刻都要保证行为的正确性；后者虽然不紧急，但很<strong>容易被忽略</strong>，而忽略的后果很严重，忽略后系统将变得越来越难以维护，终有一天变得无法再修改，只能重构来实现新功能需求。</p>
+<p>系统行为的正确性不需要更多强调，但是系统架构的灵活性则更需要牢记，在设计系统之初、在系统演进时都要思考。</p>
+<h2 id="_5">从基础构建开始：编程范式</h2>
+<p>编程范式指的是程序采用什么样的代码结构，与具体的编程语言关系相对较小。</p>
+<h3 id="_6">第三章、编程范式总览</h3>
+<p>三类编程范式及其意义：</p>
+<ul>
+<li>结构化编程：对程序控制权的直接转移进行了限制和规范，通俗讲就是限制了<code>goto</code>语句</li>
+<li>面向对象编程（OOP）：对程序控制权的间接转移进行了限制和规范, 通俗讲就是限制了函数指针，程序就是类及其之间的函数调用</li>
+<li>函数式编程：对程序中的赋值进行了限制和规范，通俗讲就是限制了赋值语句</li>
+</ul>
+<p>与架构三大关注点的关系：</p>
+<ul>
+<li>功能性：多态可以跨越架构边界，对应 OOP</li>
+<li>组件独立性：各个模块/函数内部实现则遵循结构化编程范式</li>
+<li>数据管理：数据存放与访问权限，对应函数式编程</li>
+</ul>
+<p>每个范式都约束了某种编写代码的方式，明确了<strong>什么不应该做</strong>。</p>
+<h3 id="_7">第四章、结构化编程</h3>
+<p><code>goto</code> 语句导致功能/模块无法被递归拆分成更小的部分，所以需要限制。</p>
+<p>强调将大型系统<strong>按照功能拆分</strong>成各个模块和组件。并且每个模块/组件<strong>可以被方便的测试</strong>（单元测试 or 集成测试）。</p>
+<h3 id="_8">第五章、面向对象编程</h3>
+<p><strong>封装</strong>：数据和操作数据的函数封装在一个类中，要求高内聚、低耦合。</p>
+<p><strong>继承</strong>：可以在某个作用域内对外部定义的某一组变量与函数进行覆盖。</p>
+<p><strong>多态</strong>，实质是一种函数指针的应用：</p>
+<ul>
+<li>例如，在C++中，类中的虚函数地址都被记录在 vtable 的数据结构中。对虚函数的每次调用都要先查询这个表；接口的实现类的构造函数负责将该类的虚函数地址加载到对象的 vtable 中。</li>
+</ul>
+<p>如果没有面向对象技术，直接使用函数指针实现多态充满了危险，因为对<strong>指针的正确调用</strong>需要人为遵守约定，否则会有 bug 或出错。因此，面向对象编程语言为我们消除了人工遵守约定的必要，也就等于消除了这方面的危险性。采用面向对象编程语言让多态实现变得非常简单，让一个传统C程序员可以去做以前不敢想的事情。</p>
+<p>通过多态，面向对象编程其实是对程序间接控制权的转移进行了约束。</p>
+<p>通过多态，能够实现<strong>插件式架构</strong>，可以在调用方不做变更情况下，替换底层的实现。</p>
+<ul>
+<li>例如，Unix 系统将 IO 设备设计成插件形式，即不同的驱动设备程序只要<strong>实现指定的接口</strong>，就能被系统调用。</li>
+</ul>
+<p><strong>依赖反转</strong>，是一种设计思想，这里可以粗暴的理解为<strong>面向接口编程</strong>。上层函数只能调用底层的类的接口，而接口一般都是稳定不变的，但是接口的实现可以有很多变化。</p>
+<ul>
+<li>在不用<strong>依赖反转</strong>时，依赖的方向是 上层函数依赖其调用的函数。</li>
+<li>在使用<strong>依赖反转</strong>时，依赖的方向变成，底层函数的实现需要依赖事先约定好的接口，具体来说就是函数签名不能变。</li>
+</ul>
+<p>依赖反转的好处是</p>
+<ul>
+<li>让组件具有独立部署能力：当某个组件的源代码需要修改时，仅仅需要重新部署该组件，不需要更改其他组件</li>
+<li>让系统具有独立开发能力：如果系统中的所有组件都可以独立部署，那它们就可以由不同的团队并行开发，这就是所谓的独立开发能力</li>
+</ul>
+<p>举个例子：利用<strong>依赖反转</strong>的设计，让数据库模块和用户界面模块都依赖于业务逻辑模块（而非相反），让用户界面和数据库都成为业务逻辑的插件。这样一来，业务逻辑、用户界面以及数据库就可以被编译成三个独立的组件或者部署单元。</p>
+<p><strong><em>面向对象编程对架构的意义</em></strong>：面向对象编程就是以多态为手段来对源代码中的依赖关系进行控制的能力，这种能力让软件架构师可以构建出某种插件式架构，让高层策略性组件与底层实现性组件相分离，底层组件可以被编译成插件，实现独立于高层组件的开发和部署。</p>
+<h3 id="_9">第六章、函数式编程</h3>
+<p>函数式编程中一个核心的概念是 —— 不可变性。比如 Scala 编程语言中的 <code>val</code> 关键字指定不可变变量。</p>
+<p>不可变性与架构的关系：所有的竞争问题、死锁问题、并发更新问题都是由可变变量导致的。</p>
+<p>根据可变性，对系统进行隔离：</p>
+<ul>
+<li>一个架构设计良好的应用程序应该将状态修改的部分和不需要修改状态的部分隔离成单独的组件，然后用合适的机制来保护可变量。</li>
+<li>软件架构师应该着力于将大部分处理逻辑都归于不可变组件中，可变状态组件的逻辑应该越少越好。</li>
+</ul>
+<p>不可变性在架构上的应用 —— <a href="https://juejin.cn/post/7122768490863263781">事件溯源</a>。举个例子</p>
+<ul>
+<li>银行维护账户余额时，不保存具体账户余额，仅仅保存事务日志，那么当有人想查询账户余额时，我们就将全部交易记录取出，并且每次都得从最开始到当下进行累计。这样就不需要变量了。类似日志重放。</li>
+<li>并不需要这个设计永远可行，而且可能在整个程序的生命周期内，我们有足够的存储和处理能力来满足它。</li>
+</ul>
+<h2 id="_10">设计原则</h2>
+<p>这一部分内容主要讲如何利用 SOLID 原则将数据和函数组织成类，以及将这些类链接成程序。这里的程序可以指大型软件系统，也可以指单个组件。
+下面简单、直观的介绍 SOLID 原则。</p>
+<ul>
+<li>SRP: 单一职责原则</li>
+<li>每个软件模块都有且只有一个被改变的理由。</li>
+<li>OCP: 开闭原则</li>
+<li>如果软件系统想要更容易被改变，那么其设计就必须允许新增代码来修改系统行为，而非只能靠修改原来的代码。</li>
+<li>LSP: 里氏替换原则</li>
+<li>如果想用可替换的组件来构建软件系统，那么这些组件就必须遵守同一个约定，一遍让这些组件可以相互替换。</li>
+<li>ISP: 接口隔离原则</li>
+<li>软件设计避免不必要的依赖</li>
+<li>DIP: 依赖反转原则</li>
+<li>高层策略性代码不应该依赖底层实现细节的代码，恰恰相反，那些实现底层细节的代码应该依赖高层策略性的代码。</li>
+</ul>
+<h3 id="srp">第七章、SRP 单一职责原则</h3>
+<p>每一个软件模块都应该只对<strong>一类行为者</strong>负责。</p>
+<p>文章举了一个非常有意思的例子，一个 <code>Employee</code> 类里面提供了 <code>calculatePay()</code> 和 <code>reportHours()</code> 两个函数，前者是为了给财务部门计算薪酬、后者是为了给人力部门汇报工时。</p>
+<p><a class="glightbox" href="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230923-185344494.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="picture 2" src="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230923-185344494.png" /></a>  </p>
+<p>由于在一个类里面，所以这两个函数复用了 <code>regularHours()</code> 函数来计算工时。</p>
+<p><a class="glightbox" href="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230923-190810921.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="picture 6" src="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230923-190810921.png" /></a></p>
+<p>如果财务部门需要修改工时计算方法，而负责修改的程序员由于没有注意到 <code>regularHours()</code> 函数还被 <code>reportHours()</code> 调用了，所以直接修改了 <code>regularHours()</code> 函数。此时人力部门看到结果也是经过修改过后的数据！！很容易导致问题！！</p>
+<p>因此，需要将 <code>calculatePay()</code> 和 <code>reportHours()</code>  两个功能实现拆分到不同的类当中去，并使用各自私有的计算工时的函数。这样，有两个类分别对应财务和人力的计算逻辑，它们只对<strong>一个行为者</strong>负责。</p>
+<h3 id="ocp">第八章、OCP 开闭原则</h3>
+<p>设计良好的计算机软件应该易于扩展，同时抗拒修改。换句话说，一个设计良好的计算机系统应该在不需要修改的前提下就可以轻易被扩展。</p>
+<p>通俗的说，设计要考虑软件的<strong>扩展性</strong>。</p>
+<p>实现的方式（个人理解）就是，利用<strong>依赖反转</strong>原则，将高层抽象定义成接口，应用程序面向接口编程，而屏蔽底层实现细节，同时接口也可以实现多态。接口尽量保证稳定。</p>
+<h3 id="lsp">第九章、LSP 里氏替换原则</h3>
+<p>面向接口编程，应用程序通过调用各个接口完成处理逻辑，实现接口的不同衍生类可以相互替换。</p>
+<p>还是在讨论扩展性问题，继承就是将上层抽象和底层实现隔离，在接口不变动的情况下，具体实现类之间可以相互替换而不影响系统整体功能。</p>
+<h3 id="isp">第十章、ISP 接口隔离原则</h3>
+<p>任何层次的设计，都不应该依赖它并不需要的东西。</p>
+<p>举个例子，有如下的 OPS 类有三个函数，分别被 User1、User2、User3 类中的函数直接调用。这种直接依赖导致任何对 OPS 的 op1 函数的修改也会导致 User2、User3 被重新编译。</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OPS</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op1</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op2</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op3</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div>
+<p>在 User 和 OPS 中间添加一个接口层，让底层实现 OPS 依赖接口（依赖反转），User 类调用接口。这样就能保证每个类不依赖最小化。</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">U1Ops</span><span class="w"> </span><span class="p">{</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op1</span><span class="p">();}</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">U2Ops</span><span class="w"> </span><span class="p">{</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op2</span><span class="p">();}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">U3Ops</span><span class="w"> </span><span class="p">{</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op3</span><span class="p">();}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OPS</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">U1Ops</span><span class="p">,</span><span class="w"> </span><span class="n">U2Ops</span><span class="p">,</span><span class="w"> </span><span class="n">U3Ops</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op1</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op2</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">op3</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div>
+<h3 id="dip">第十一章、DIP 依赖反转原则</h3>
+<p>依赖反转原则(DIP)主要想告诉我们的是，如果想要设计一个灵活的系统，在源代码层次的依赖关系中就应该多引用抽象类型，而非具体实现。</p>
+<p>也就是说，在Java这类静态类型的编程语言中，在使用use、import、include这些语句时应该只引用那些包含接口、抽象类或者其他抽象类型声明的源文件，不应该引用任何具体实现。这里是针对那些经常会变动的实现而言的，并不包括像 String 这类稳定实现的类。</p>
+<p>通过依赖稳定的抽象层，来实现依赖反转。有一些可以<strong>按需</strong>遵循的最佳实践</p>
+<ul>
+<li>应在代码中多使用抽象接口，尽量避免使用那些多变的具体实现类</li>
+<li>不要在具体实现类上创建衍生类</li>
+<li>不要覆盖(override)包含具体实现的函数</li>
+</ul>
+<p>以下图为例，这条曲线将整个系统划分为两部分组件：抽象接口与其具体实现。抽象接口组件中包含了应用的所有高阶业务规则，而具体实现组件中则包括了所有这些业务规则所需要做的具体操作及其相关的细节信息。图中曲线代表<strong>架构边界</strong>。</p>
+<p><a class="glightbox" href="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230924-011627203.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="picture 10" src="../../image/%E6%9E%B6%E6%9E%84%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/IMG_20230924-011627203.png" /></a>  </p>
+<h2 id="_11">组件构建原则</h2>
+<p>SOLID 原则用来指导如何实现各个组价，组件构建原则用来指导如何构建系统。</p>
+<h3 id="_12">第十二章、组件</h3>
+<p>组件是软件的部署单元，是整个软件系统在部署过程中可以独立完成部署的最小实体。例如，对于Java来说，它的组件是jar文件/maven模块。</p>
+<p>为了介绍程序组件部署历史，介绍了下</p>
+<ul>
+<li>重定位技术：随着应用程序代码的增长，无法在固定位置加载依赖库代码，否则会导致应用程序代码被切断。通过重定位技术，使得依赖库代码可以被加载到内存的不同位置。可参考<a href="https://en.wikipedia.org/wiki/Relocation_(computing)">Relocation 介绍</a></li>
+<li>链接器（linker）：程序、依赖库被分别编译、加载到内存后，将程序中调用的函数链接到依赖中对应的地址。</li>
+</ul>
+<h3 id="_13">第十三章、组件聚合</h3>
+<p>那么那些类应该被组合成一个组件呢？本章将介绍3个基本原则：</p>
+<ul>
+<li>REP(Reuse/Release Equivalence Principle): 复用/发布等同原则</li>
+<li>软件复用的最小粒度等同于其发布的最小粒度，需要有自己的发布版号（另外还要有通知、发布文档）</li>
+<li>CCP(Common Closure Principle): 共同闭包原则</li>
+<li>对应组件层面的 SRP 原则，将那些会同时修改、并且为相同目的而修改的类放到同一个组件中，而将不会同时修改、不会为了相同目的而修改的类放到不同组件中。这样变更都会集中在某个组件中，只要重新发布、部署单个组件即可。</li>
+<li>CRP(Common Reuse Principle): 共同复用原则</li>
+<li>不要强迫一个<strong>组件的用户</strong>依赖他们不需要的东西，不紧密相连的类不该放在同一组件中。</li>
+<li>是 ISP 原则的普适版，都强调<strong>不要依赖不需要用到的东西</strong>。</li>
+</ul>
+<p>REP和CCP原则是黏合性原则，它们会让组件变得更大，而CRP原则是排除性原则，它会尽量让组件变小。软件架构师需要在这三个原则中取舍。
+如下图所示，如果忽略某个方框中的原则，将会其对边上的问题。</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">         </span>┌─────────────┐<span class="w">                                    </span>┌─────────────┐
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">         </span>│<span class="w">             </span>│<span class="w">      </span>too<span class="w"> </span>many<span class="w"> </span>redundent<span class="w"> </span>release<span class="w">    </span>│<span class="w">             </span>│
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">         </span>│REP<span class="w"> </span>principle│────────────────────────────────────│CCP<span class="w"> </span>principle│
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">         </span>│为复用性而组合<span class="w"> </span>│<span class="w">                                    </span>│<span class="w"> </span>为维护性而组合<span class="w"> </span>│
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">         </span>└─────────────┘<span class="w">                                    </span>└─────────────┘
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                     </span><span class="se">\ </span><span class="w">                                          </span>/<span class="w">         </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                       </span><span class="se">\ </span><span class="w">        </span>如何在这片区域内定位<span class="w">             </span>/<span class="w">          </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                 </span>过多组件变更<span class="w">                                 </span>/<span class="w">             </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">                          </span><span class="se">\ </span><span class="w">                              </span>难以复用<span class="w">        </span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                            </span><span class="se">\ </span><span class="w">                          </span>/<span class="w">                  </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">                              </span><span class="se">\ </span><span class="w">                      </span>/<span class="w">                    </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">                                </span><span class="se">\ </span>┌─────────────┐<span class="w">  </span>/<span class="w">                     </span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                                  </span>│<span class="w">             </span>│<span class="w">                          </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                                  </span>│CRP<span class="w"> </span>principle│<span class="w">                          </span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">                                  </span>│为减少发布而拆分│<span class="w">                      </span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">                                  </span>└─────────────┘<span class="w">                          </span>
+</span></code></pre></div>
+<p>随着项目的发展，项目在上图三角形中的位置不断改变：在前期主要牺牲复用性（右侧），成熟后被依赖会变多，项目定位开始左移。主要与开发进度和被使用方式有关。</p>
+<h3 id="_14">第十四章、组件耦合</h3>
+<p><strong>组件依赖关系图中不应该出现环</strong></p>
+<ul>
+<li>打破循环依赖的方法：依赖反转，打破环的某一边，让该边连接的两个组件都依赖于一个新的接口，接口放在依赖组件的那一侧。</li>
+</ul>
+<p><strong>示例</strong></p>
+<p>如下图，<code>Interactor</code>、<code>Authorizer</code>、<code>Entities</code> 形成了循环依赖。 <code>Database</code> 组件原本只依赖 <code>Entities</code> 组件，现在却必须也要与 <code>Authorizer</code> 组件兼容。比如 <code>Database</code> 需要升级 <code>Entities</code> 组件到 Entities-1.10 版本，但是它依赖了 <code>Authorizer</code> 组件的 Authorizer-1.12 版本，如果低于这个版本会报错；此时，<code>Database</code> 组件相当于间接依赖了 <code>Authorizer</code>。 </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>┌────────────┐<span class="w">                     </span>┌─────────────┐
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│<span class="w"> </span>Interactor<span class="w"> </span>│◀────────────────────│<span class="w"> </span>Authorizer<span class="w">  </span>│
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>└────────────┘<span class="w">                     </span>└─────────────┘
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">       </span>│<span class="w">                                  </span>▲
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">       </span>│<span class="w">                                  </span>│
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">       </span>▼<span class="w">                                  </span>│
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>┌─────────────┐<span class="w">                           </span>│
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│<span class="w">  </span>Entities<span class="w">   </span>│───────────────────────────┘
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>└─────────────┘
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">       </span>▲
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">       </span>│
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">       </span>│
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>┌─────────────┐
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│<span class="w">  </span>Database<span class="w">   </span>│
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>└─────────────┘
+</span></code></pre></div>
+<p>此时的解决方案有两类：</p>
+<ul>
+<li>技术上：将 Entities 组件打成一个 <strong>uber-jar</strong>，除了把自己的二进制代码打包到<strong>当前组件</strong>中，还将部分依赖组件的二进制代码打包到当前组件中。同时为了避免使用当前组件的程序<strong>错误使用当前组件中的依赖组件</strong>而产生冲突，还会搭配 <strong>shade</strong> 技术，a.k.a 在当前的组件里面重命名依赖的组件的包名。</li>
+<li>设计上：有两种方法<ul>
+<li>应用依赖反转原则，在 Entities 组件中定义一个接口，Entities 组件中使用该接口，Authorizer 组件中实现该接口。</li>
+<li>重新定义一个组件，将有相互依赖的内容放到新组件中</li>
+</ul>
+</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">/**</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cm"> * 依赖反转</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm"> * ┌──────────────┐                   ┌──────────────┐</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm"> * │   Entities   │                   │  Authorizer  │</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cm"> * │              │                   │              │</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="cm"> * │      ┏━━━━┓  │                   │  ┏━━━━━━━━━━┓│</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="cm"> * │      ┃User┃──┼───────────────────┼─▶┃Permission┃│</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="cm"> * └──────┻━━━━┻──┘                   └──┻━━━━━━━━━━┻┘</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="cm"> *</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="cm"> *</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="cm"> * ┌─────────────────┐                ┌──────────────┐</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="cm"> * │    Entities     │                │  Authorizer  │</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="cm"> * │┏━━━━┓           │                │              │</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="cm"> * │┃User┃           │                │  ┏━━━━━━━━━━┓│</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="cm"> * │┗━━━━┛           │         ┌──────┼─▶┃Permission┃│</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="cm"> * │   │  ┏━━━━━━━━━━┫         │      └──┻━━━━━━━━━━┻┘</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="cm"> * │   │  ┃Permission┃         │</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="cm"> * │   └─▶┃Interface ┃─────────┘</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="cm"> * └──────┻━━━━━━━━━━┛</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="cm"> */</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="cm">/**</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="cm"> * 重新定义组件</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="cm"> * ┌──────────────┐               ┌──────────────┐</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="cm"> * │  Interactor  │◀──────────────│  Authorizer  │</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="cm"> * └──────────────┘               └──────────────┘</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="cm"> *         │                              │</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="cm"> *         │                              │</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="cm"> *         ▼                              ▼</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="cm"> * ┌──────────────┐               ┌──────────────┐</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="cm"> * │   Entities   │─────────────▶ │  Permission  │</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="cm"> * └──────────────┘               └──────────────┘</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="cm"> *         ▲</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="cm"> *         │</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="cm"> *         │</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="cm"> * ┌──────────────┐</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="cm"> * │   Database   │</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="cm"> * └──────────────┘</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="cm"> */</span>
+</span></code></pre></div>
+<p><strong>稳定依赖原则(SDP)</strong>：依赖关系必须指向更稳定的方向。通俗说，一个需要稳定的组件不应该依赖经常会变动的组件，否则就没办法保证稳定。</p>
+<p>一个设计越是抽象，那么它应该是越不稳定的，因为可以有多种实现方式。然而却又有如下原则。</p>
+<p><strong>稳定抽象原则(SAP)</strong>：一个组件的抽象化程度应该与稳定性保持一致。</p>
+<p>SDP + SAP =&gt;  组件需要稳定，但也不能一成不变，所以一个组件应该是部分抽象、部分稳定的。抽象的部分可以通过开闭原则来保证扩展性，稳定的部分最好不要轻易变动。</p>
+<p>此外，本章节还介绍了一些依赖关系管理的指标。当然，只是用来衡量的工具，不代表真理。</p>
+<h2 id="_15">软件架构</h2>
+<h3 id="_16">第十五章、什么是软件架构</h3>
+<ul>
+<li>架构师必须是一线程序员，只有对糟糕设计有深切体会的架构师才知道合理架构对最大化生产力的重要性。</li>
+<li>架构工作概括：系统如何切分成组件、组件之间如何排列、组件之间如何通信。</li>
+<li>架构目的：<ul>
+<li>支撑系统生命周期</li>
+<li>为了让系统便于理解、修改、维护、部署</li>
+<li>最大化生产力、最小化运营成本。</li>
+</ul>
+</li>
+<li>软件系统可以结构为 <strong>抽象 + 实现</strong> 两类元素<ul>
+<li>抽象对应业务规则，实现对应具体细节。在架构设计过程中</li>
+<li><strong>抽象</strong> 应该完全不依赖与 <strong>实现</strong>，并且尽可能推迟确定实现细节。这样可以为系统选择不同的实现组件。比如抽象出系统所用 KV 接口，底层可以选择 RocksDB、LevelDB、Redis 等等各种具体的实现组件。</li>
+<li><strong>一个优秀的软件架构师应该致力于最大化可选项（Option）数据</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_17">第十六章、独立性</h3>
+<p><strong>表面性的重复</strong>：处理数据库的函数和某个 UI 函数一样，此处只是表面性的重复，不应该复用。</p>
+<p>利用各种解耦方法，让系统的各个部分保留一定独立性</p>
+<ul>
+<li>源码层次独立：控制源码模块间依赖，实现单个模块变更不导致其他模块重新编译</li>
+<li>部署层次独立：控制部署单元（jar、共享库等）之间的依赖，实现一个模块变更不会导致其他模块的重新构建和部署</li>
+<li>服务层次的独立性：将组件间的依赖关系降低到数据结构级别，仅通过网络数据包进行通信。</li>
+</ul>
+<p>不同的解耦方法适用于不同的场景，随着项目的发展，最优的方法也会随之改变。比如由单机项目变成分布式的，则最佳解耦方法可能由源码层次独立变成部署层次独立，甚至是服务层次独立。</p>
+<h3 id="_18">第十七章、划分边界</h3>
+<p><strong>划分边界的好处</strong>：通过划清边界，可以推迟和延后一些细节性的决策，可以节省大量的时间、避免大量的问题。这就是一个设计良好的架构所应该带来的助益。比如，在设计一个 web 服务时，不用在一开始就考虑数据库选型，因为最终可能仅仅只需要静态网页，根本用不到数据。</p>
+<p><strong>如何划分边界</strong>：在不相关的组件之间划分边界，比如 GUI 、Database 与 业务逻辑之间就可以划分边界。 利用 SRP 原则来考虑如何划分边界。</p>
+<p><strong>插件式架构</strong>：通过定义好抽象接口，可以选用不同的底层实现。</p>
+<p>为了在软件架构中画边界线，我们需要先将系统分割成组件，其中一部分是系统的核心业务逻辑组件，而另一部分则是与核心业务逻辑无关但负责提供必要功能的插件。然后通过对源代码的修改（此处修改指的是添加 Wrapper 做适配，而并非真的修改数据库等组件源代码），让这些非核心组件依赖于系统的核心业务逻辑组件。</p>
+<h3 id="_19">第十八章、边界剖析</h3>
+<p><strong>需要管控跨边界的依赖</strong></p>
+<ul>
+<li>源码层次：通过跨边界的函数调用，实现了依赖。因为当一个模块变更之后，依赖的那个模块可能也需要重新编译。</li>
+<li>部署层次：也是通过函数调用实现依赖，依赖一个动态链接库。</li>
+<li>服务层次：边界形式最强，通过网络调用，延迟很大，因此需要控制次数。</li>
+</ul>
+<h3 id="_20">第十九章、策略与层次</h3>
+<ul>
+<li>策略即抽象。</li>
+<li>离 I/O 越远，抽象的层次越高。</li>
+<li>层次低组件的依赖层高的组件，可以通过定义接口实现。</li>
+</ul>
+<h3 id="_21">第二十章、业务逻辑</h3>
+<p>应用程序分为<strong>业务逻辑</strong>和<strong>插件</strong>两部分。</p>
+<ul>
+<li>业务逻辑：是系统核心逻辑，产生价值的逻辑<ul>
+<li>业务实体：包含了业务逻辑的关键数据</li>
+<li>用例：系统在某个特定场景下的运行逻辑</li>
+</ul>
+</li>
+<li>插件：为了完成业务逻辑而提供的服务功能</li>
+</ul>
+<h3 id="_22">第二十一章、尖叫的软件架构</h3>
+<ul>
+<li>架构应该面向要解决的问题（用例），而不是具体的框架、工具。</li>
+<li>可测试的架构设计：测试时不应该运行 web 服务、不应该链接数据库。</li>
+<li>优秀的架构设计，应该能让人第一眼看出来这个系统是为了解决什么问题的。</li>
+<li>了解一个系统也应该从测试用例开始看起，而非陷于各个模块的细节。</li>
+</ul>
+<h3 id="_23">第二十二章、整洁架构</h3>
+<ul>
+<li>
+<p>各种架构方式的共同点：</p>
+<ul>
+<li>相同的设计目标：按照不同关注点对软件进行切割</li>
+<li>独立于框架：可以使用框架，但不与某个框架深度绑定</li>
+<li>可被测试：业务逻辑可以脱离 UI、数据库、Web服务等其他外部元素</li>
+<li>独立于 UI：UI 变更不会影响其他部分。</li>
+<li>独立于数据库：可以轻易使用不同的数据库来替换</li>
+<li>独立于外部机构：不依赖于其他外部接口</li>
+</ul>
+</li>
+<li>
+<p>依赖关系规则</p>
+<ul>
+<li>同心圆分别代表了软件系统中的不同层次，通常越靠近中心，其所在的软件层次就越高。基本上，外层圆代表的是机制，内层圆代表的是策略。</li>
+<li>源码中的依赖关系必须只指向同心圆的内层，即由低层机制指向高层策略。</li>
+<li>跨越边界的数据在数据结构上都是很简单的</li>
+<li>为了避免内层使用外层的数据结构，<strong>当我们进行跨边界传输时，一定要采用内层最方便使用的形式。</strong></li>
+</ul>
+</li>
+</ul>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/**
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w"> </span>*<span class="w"> </span>整洁架构
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w"> </span>*<span class="w"> </span>┌──────────────────────────────────────┐
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>┌────────────────────────────────┐<span class="w"> </span>│
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">                                </span>│<span class="w"> </span>│
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>┌──────────────────────┐<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>│<span class="w">       </span>┌────────────┐<span class="w"> </span>│<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w"> </span>──┼─▶<span class="w"> </span>──┼─▶<span class="w"> </span>────┼▶Core<span class="w"> </span>Logic<span class="w"> </span>│<span class="w"> </span>│<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>│<span class="w">       </span>└────────────┘<span class="w"> </span>│<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>│<span class="w">                      </span>│<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>│<span class="w">       </span>Use<span class="w"> </span>Case<span class="w">       </span>│<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">     </span>└──────────────────────┘<span class="w">   </span>│<span class="w"> </span>│
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>│<span class="w">       </span>Interface<span class="w"> </span>Adapter<span class="w">        </span>│<span class="w"> </span>│
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">   </span>└────────────────────────────────┘<span class="w"> </span>│
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">                                      </span>│
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w"> </span>*<span class="w"> </span>│<span class="w">     </span>Framework/device<span class="w"> </span>driver/etc.<span class="w">     </span>│
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w"> </span>*<span class="w"> </span>└──────────────────────────────────────┘
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w"> </span>*/
+</span></code></pre></div>
+<h3 id="_24">第二十三章、展示器和谦卑对象</h3>
+<p><strong>谦卑对象模式</strong></p>
+<ul>
+<li>是为了将系统中难以测试的部分与易于测试的部分分割成不同模块。难以测试的模块被称为 <strong>谦卑组</strong>，通常在组件边界处，比如数据库、UI 等。又因为跨越边界传输的数据一般都是简单/通用的数据类型，所以可以通过插桩/mock的形式来实现。</li>
+<li>目的是为了提高系统的可测试性。</li>
+</ul>
+<h3 id="_25">第二十四章、不完全边界</h3>
+<p>不完全边界</p>
+<ul>
+<li>概念：在构建系统时如果严格按照边界划分，分成不同组件、独立部署，那么成本是很高的。但为了应对将来可能的需要，通常会预留一个边界。</li>
+<li>做法：<ul>
+<li>将系统分割成一系列独立编译、部署的组件后，再把它们构建成一个组件。</li>
+<li>门户模式（facade pattern）中的 Facade 类决定为 Client 类选择具体的一种实现类。此时， Client 会依赖所有的实现类，但也很容易改造符合架构边界的实现方式（利用依赖反转原则，添加接口）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_26">第二十五章、层次与边界</h3>
+<ul>
+<li>本节结合一个例子来说明架构的边界可以存在任何地方。</li>
+<li>架构师需要审视在什么地方设计架构边界、成本有多大；如果前期忽略，后期增加架构边界是否容易。</li>
+<li>随着系统演进，架构师需要<strong>不断审视</strong>在何处增加架构边界 —— 增加与否所要承担的成本。</li>
+</ul>
+<h3 id="main">第二十六章、Main 组件</h3>
+<ul>
+<li>系统只要有一个 Main 组件，负责创建、协调、监督其他组件的运行。</li>
+<li>Main 组件控制全局，依赖所有组件，因此抽象层次最低。<ul>
+<li>是入口，包含最多的细节。</li>
+<li>负责加载所有必要信息，将控制权交给系统高层抽象的组件。</li>
+<li>可以看成是启动的插件，可以有多个，每个对应不同的配置。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_27">第二十七章、服务：宏观与微观</h3>
+<ul>
+<li>面向服务的架构（SOA，此处着重指微服务）并<strong>不能做到完全解耦</strong>，服务之间传递的数据发生变化时，服务的另一侧仍然需要变更。因此，服务边界 ≠ 架构边界。</li>
+<li>可以使用模板方法/策略模式来实现解耦。</li>
+</ul>
+<h3 id="_28">第二十八章、测试边界</h3>
+<ul>
+<li>强调测试重要性，测试也是系统的一个组件，如 Maven 中 dependency 中的 Scope 有 test 选项。</li>
+<li>测试组件是供开发系统使用的。</li>
+<li>设计测试时也要考虑鲁棒性，否则对系统简单的修改都会导致大量测试报错，难以维护。</li>
+</ul>
+<h3 id="_29">第二十九章、整洁的嵌入式架构</h3>
+<p>略</p>
+<h2 id="_30">实现细节</h2>
+<h3 id="_31">第三十章、数据库只是实现细节</h3>
+<ul>
+<li>设计软件架构时，更多的应该关心业务逻辑，数据库技术只是实现细节，可以在底层实现上优化，不应当影响上层抽象。</li>
+<li>系统架构设计还会受市场影响，比如用户就是希望你的软件中的数据库全部用 TiDB，因为他觉得 TiDB 比 MySQL 更牛逼，即使他只听宣传这么说。</li>
+</ul>
+<h3 id="web">第三十一章、Web 是实现细节</h3>
+<ul>
+<li>Web 技术并没有改变任何东西，只是将计算在客户端（浏览器）、服务端之间搬运：开始计算都在服务器上，后来 ajax 将运算搬到浏览器上，后来 Nodejs 又将计算搬回服务端。</li>
+<li>UI 是实现细节，应当与业务逻辑划分边界。保证 UI 的演进不影响核心业务逻辑。</li>
+</ul>
+<h3 id="_32">第三十二章、应用程序框架式实现细节</h3>
+<p>尽可能不与第三方框架绑定，但是可以使用语言自带的类库，如 C++/Java 标准类库。</p>
+<h3 id="_33">第三十三章、案例分析</h3>
+<p>略</p>
+<h3 id="_34">第三十四章、拾遗</h3>
+<p>如果不考虑具体实现细节，再好的设计也无法长久。必须要将设计映射到对应的代码结构上，考虑如何组织代码树，以及在编译期和运行期采用哪种解耦合的模式。保持开放，但是一定要务实，同时要考虑到团队的大小、技术水平，以及对应的时间和预算限制。最好能利用编译器来维护所选的系统架构设计风格，小心防范来自其他地方的耦合模式，例如数据结构。所有的实现细节都是关键的！</p>
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="HannanKan/homepage"
+  data-repo-id="R_kgDOKMfeHA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOKMfeHM4CZXT3"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+  <!-- Add scripts that need to run afterwards here -->
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - now
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="mailto:<hannankan@foxmail.com>" target="_blank" rel="noopener" title="邮箱地址" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.zhihu.com/people/HannanKan" target="_blank" rel="noopener" title="知乎" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
