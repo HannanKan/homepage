@@ -68,17 +68,20 @@ talk is cheap, show me the code! 上代码
 ## 总结
 **线程泄露** 是由于线程未正常终止，导致资源无法被释放。通过 JFR 日志可以看到，Java 应用一直在申请线程、而没有线程释放。
 
-# Ref
+
+## Ref
 * [Finding Java Thread Leaks With JDK Flight Recorder and a Bit Of SQL]
 * 更多 JFR 相关问题
-  * [JFR导致雪崩](https://heapdump.cn/article/2068590)
+    * [JFR导致雪崩](https://heapdump.cn/article/2068590)
+
+
 
 [Finding Java Thread Leaks With JDK Flight Recorder and a Bit Of SQL]: https://www.morling.dev/blog/finding-java-thread-leaks-with-jdk-flight-recorder-and-bit-of-sql/
 
 
-# Code List
+## Code List
 
-## List 1. <a name='list1'></a>
+### List 1. <a name='list1'></a>
 
 ```java
     public static Set<Integer> getFriends(Integer employId) {
