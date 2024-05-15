@@ -51,6 +51,9 @@ nav:
     - 学习大纲: 'engineering/intro2BigDataComponent/outline.md'
     - Hudi:
       - Hudi 简介: 'engineering/intro2BigDataComponent/hudi/hudi_intro.md'
+- 技术前沿:
+  - SIGMOD/VLDB:
+    - SIGMOD24/VLDB23: 'research_related/sigmod24_vldb23.md'
 - 优秀博客:
   - 优秀博客汇总: 'blogs/index.md'
 - 学习资料:
