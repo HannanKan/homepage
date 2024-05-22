@@ -23,6 +23,7 @@ VLDB23 research track 的论文见[VLDB RESEARCH LINK]. 总共接受了 350 篇�
 | -------- | -------- |  -------- |
 |EAB|A Deep Dive into Common Open Formats for Analytical DBMSs|Microsoft Gray Systems Lab|
 |Research|QueryBooster: Improving SQL Performance Using Middleware Services for Human-Centered Query Rewriting| UCI |
+|Research [VLDB23-2 INDUSTRY LINK]|An Empirical Evaluation of Columnar Storage Formats| CMU|
 
 tips: EAB 指 Experiment, Analysis and Benchmark（实验、分析与基准）
 
@@ -47,4 +48,5 @@ heterogeneous acceleration toolkit for data analytical engines|Intel|https://www
 
 [SIGMOD24 LINK]: https://2024.sigmod.org/sigmod-list.html
 [VLDB RESEARCH LINK]: https://vldb.org/2023/?papers-research
+[VLDB23-2 INDUSTRY LINK]: https://www.vldb.org/pvldb/vol17/FrontMatterVol17No2.pdf
 [VLDB INDUSTRY LINK]: https://vldb.org/2023/?papers-industrial
