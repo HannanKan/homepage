@@ -28,7 +28,7 @@ where t1.a not in (
 论文可参考 Oracle 论文 [oracle vldb09 propose NAAJ] 的介绍。个人觉得 Meta 技术文档 [antijoin from velox] 更容易让人理解，推荐大家细读。
 
 ## Spark 中的实现
-// todo:
+// todo: [SPARK-32290] [SQL] SingleColumn Null Aware Anti Join Optimize
 
 
 ## Take away lesson
@@ -52,4 +52,4 @@ where t1.a not in (
 [oracle ask tom for antijoin]: https://asktom.oracle.com/ords/asktom.search?tag=null-aware-anti-join
 [stackoverflow for antijoin]: https://stackoverflow.com/questions/173041/not-in-vs-not-exists
 [oracle vldb09 propose NAAJ]: https://www.vldb.org/pvldb/vol2/vldb09-423.pdf
-
+[SPARK-32290]: https://issues.apache.org/jira/browse/SPARK-32290
