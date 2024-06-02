@@ -29,7 +29,7 @@ where t1.a not in (
 
 ## Spark 中的实现
 // todo: [SPARK-32290] [SQL] SingleColumn Null Aware Anti Join Optimize
-
+// [antijoin from Spark] 
 
 ## Take away lesson
 当 antijoin 的子查询中不包括 `etra filter` 时（在subquery中**没有**使用来自out query的列构造 non-equality 条件）：
@@ -49,6 +49,7 @@ where t1.a not in (
 * [stackoverflow for antijoin]
 
 [antijoin from velox]: nhttps://facebookincubator.github.io/velox/develop/anti-join.html
+[antijoin from Spark]: https://spark.apache.org/docs/latest/sql-ref-null-semantics.html
 [oracle ask tom for antijoin]: https://asktom.oracle.com/ords/asktom.search?tag=null-aware-anti-join
 [stackoverflow for antijoin]: https://stackoverflow.com/questions/173041/not-in-vs-not-exists
 [oracle vldb09 propose NAAJ]: https://www.vldb.org/pvldb/vol2/vldb09-423.pdf
