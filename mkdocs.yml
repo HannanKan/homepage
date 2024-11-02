@@ -7,12 +7,27 @@ theme:
   features:
     - content.code.copy
     - content.code.select
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      primary: teal
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 亮色模式
 plugins:
   - meta-manager
   - search
   - glightbox
 
 markdown_extensions:
+  ## support latex math equation inline or in block
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -25,6 +40,9 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - pymdownx.tilde #删除线
+
+
 
 
 nav:
@@ -47,6 +65,7 @@ nav:
       - 1BRC竞赛: 'engineering/java_scala/性能优化/1brc.md'
       - 1BRC竞赛代码赏析: 'engineering/java_scala/性能优化/1brc-review.md'
       - 线程泄露: 'engineering/java_scala/性能优化/threadLeakInvestigate.md'
+      - Java 向量化: 'engineering/java_scala/性能优化/JavaVectorAPI_intro.md'
   - 快学大数据:
     - 学习大纲: 'engineering/intro2BigDataComponent/outline.md'
     - Hudi:
@@ -75,4 +94,8 @@ extra:
   search:
     language: 'en, de, ru'
 copyright: "Copyright &copy; 2023 - now"
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
 

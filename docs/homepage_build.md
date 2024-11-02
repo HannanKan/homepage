@@ -41,6 +41,7 @@ extra:
             name: 邮箱地址
 ```
 * [详细使用教程](https://shafish.cn/blog/mkdocs/), 这哥们的博客主题就是 material, 这个教程也写的比较详细.
+* [github markdow 语法支持 + 暗色模式](https://www.xkww3n.cyou/2021/12/05/mkdocs-notes/)
 * [其他教程](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#__codelineno-4-3)
 
 material 主题中可以使用各种小图标(也叫 font)，比如将当前页翻到最后看到的纸飞机和邮箱图标。图标样式和名字可以从下面[链接](https://fontawesome.com/v6/icons?o=r&s=solid)中找到。
