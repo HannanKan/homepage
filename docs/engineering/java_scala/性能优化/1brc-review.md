@@ -245,7 +245,7 @@ SWAR (SIMD Within A Register) . 在解析数据的时候，一次只读 8 byte�
 [Java及时编译器]: https://tech.meituan.com/2020/10/22/java-jit-practice-in-meituan.html
 [findResult函数]: https://github.com/gunnarmorling/1brc/blob/c92346790e8548f52e81254227efc935356e5e53/src/main/java/dev/morling/onebrc/CalculateAverage_thomaswue.java#L192
 [@jerrinot]: https://github.com/jerrinot
-[VisualVM]: (https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/)
+[VisualVM]: https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/
 [async-profiler]: https://github.com/async-profiler/async-profiler
 [linux-perf-cmd]: https://perf.wiki.kernel.org/index.php/Tutorial
 [VisualGC plugin]: https://visualvm.github.io/plugins.html

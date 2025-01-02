@@ -70,8 +70,10 @@ nav:
     - 学习大纲: 'engineering/intro2BigDataComponent/outline.md'
     - Hudi:
       - Hudi 简介: 'engineering/intro2BigDataComponent/hudi/hudi_intro.md'
-- Database 知识:
+- Database:
   - NAAJ: 'research_related/NAAJ.md'
+  - Trend:
+    - 2024: 'research_related/trend/DatabaseAnnualReview24.md'
 - 技术前沿:
   - SIGMOD/VLDB:
     - SIGMOD24/VLDB23: 'research_related/sigmod24_vldb23.md'
