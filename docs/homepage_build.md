@@ -9,6 +9,7 @@ comments: true
     2. Python-Markdown-Math 编写公式
     3. 自动部署 gh-pages: 参考 https://www.cnblogs.com/chinjinyu/p/17610438.html
 3. For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+4. 一个更快的教程 [Quick Start](https://github.com/tangramor/mkdocs/blob/master/docs/index.md)
 
 ## mkdocs 构建命令
 
