@@ -54,3 +54,5 @@ set backspace=indent,eol,start
 * MicroSoft ToDo
 * iTerm2
 * Postman: 测试web请求很方便
+    * 可以单独下一个软件
+    * 【推荐】也可以直接在 VS Code 里面装个 Postman 插件，同一个账号会多端同步
