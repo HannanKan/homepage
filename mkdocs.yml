@@ -48,6 +48,8 @@ markdown_extensions:
 nav:
 - Home: 'index.md'
 - 主页搭建: homepage_build.md
+- 思考与感悟:
+  - 2026_张雪夺冠的一些感悟.md
 - 书籍:
   - 书单: 'book/books_index.md'
   - 2023年:

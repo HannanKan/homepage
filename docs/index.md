@@ -11,7 +11,7 @@ comments: true
 
 ## Who am I / 简介
 
-* SparkSQL Kernel Developer / SparkSQL 内核开发工程师
+* SparkSQL Kernel Developer / SparkSQL 内核开发工程师 (3+ year)
 * ~~[Apache Paimon](https://github.com/apache/incubator-paimon) contributor (no more contribution for the time being)~~
 
 ## Talk / 技术分享
